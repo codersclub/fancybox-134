@@ -134,7 +134,7 @@
 
 			if (type == 'inline') {
 				obj	= href.substr(href.indexOf("#"));
-				type = $(obj).length > 0 ? 'inline' : 'ajax';
+//vot				type = $(obj).length > 0 ? 'inline' : 'ajax';
 			}
 
 			selectedOpts.type = type;
