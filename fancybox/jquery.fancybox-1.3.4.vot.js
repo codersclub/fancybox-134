@@ -163,9 +163,9 @@
 
 			tmp.css('padding', (selectedOpts.padding + selectedOpts.margin));
 
-			$('.fancybox-inline-tmp').unbind('fancybox-cancel').bind('fancybox-change', function() {
-				$(this).replaceWith(content.children());				
-			});
+//vot			$('.fancybox-inline-tmp').unbind('fancybox-cancel').bind('fancybox-change', function() {
+//vot				$(this).replaceWith(content.children());				
+//vot			});
 
 			switch (type) {
 				case 'html' :
@@ -179,17 +179,7 @@
 						return;
 					}
 
-					$('<div class="fancybox-inline-tmp" />')
-						.hide()
-						.insertBefore( $(obj) )
-						.bind('fancybox-cleanup', function() {
-							$(this).replaceWith(content.children());
-						}).bind('fancybox-cancel', function() {
-							$(this).replaceWith(tmp.children());
-						});
-
-					$(obj).appendTo(tmp);
-
+/*vot*/					$(obj).clone().appendTo(tmp);
 					_process_inline();
 				break;
 
