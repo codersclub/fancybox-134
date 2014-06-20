@@ -9,6 +9,7 @@
  *
  * Version: 1.3.4 (11/11/2010)
  * Requires: jQuery v1.3+
+ * Modified by Valery Votintsev for jQuery 2.1+ compatibility
  *
  * Dual licensed under the MIT and GPL licenses:
  *   http://www.opensource.org/licenses/mit-license.php
@@ -567,8 +568,8 @@
 
 		_finish = function () {
 			if (!$.support.opacity) {
-				content.get(0).style.removeAttribute('filter');
-				wrap.get(0).style.removeAttribute('filter');
+/*vot*/				content.get(0).removeAttribute('filter');
+/*vot*/				wrap.get(0).removeAttribute('filter');
 			}
 
 			if (selectedOpts.autoDimensions) {
